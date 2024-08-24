@@ -1,3 +1,3 @@
-import { Num } from './Num'
+import { toIpa } from './Sampa'
 
-export { Num }
+export { toIpa }

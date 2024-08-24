@@ -1,7 +1,7 @@
 {
-  "name": "example-typescript-package",
-  "version": "0.2.2",
-  "description": "",
+  "name": "x-sampa-to-ipa",
+  "version": "0.0.1",
+  "description": "Convert X-SAMPA to IPA",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
@@ -28,46 +28,32 @@
     "dist"
   ],
   "keywords": [
-    "example",
-    "typescript",
-    "npm",
-    "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
-    "cjs",
-    "esm",
-    "umd"
+    "x-sampa",
+    "ipa",
+    "linguistics"
   ],
-  "author": "Tom Chen <tomchen.org@gmail.com>",
+  "author": "Arkar Kyaw Aung",
   "license": "MIT",
-  "homepage": "https://github.com/tomchen/example-typescript-package",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:tomchen/example-typescript-package.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tomchen/example-typescript-package/issues"
-  },
+  "repository": {},
+  "bugs": {},
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@types/jest": "^27.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.2",
-    "jest": "^27.2.0",
-    "pinst": "^2.1.6",
-    "prettier": "^2.4.0",
-    "ts-jest": "^27.0.5",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.4.3",
-    "webpack": "^5.52.1",
-    "webpack-cli": "^4.8.0"
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.5",
+    "jest": "^29.7.0",
+    "pinst": "^3.0.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   }
 }
