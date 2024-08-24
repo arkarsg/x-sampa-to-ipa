@@ -1,6 +1,6 @@
 {
   "name": "x-sampa-to-ipa",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Convert X-SAMPA to IPA",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -32,10 +32,16 @@
     "ipa",
     "linguistics"
   ],
-  "author": "Arkar Kyaw Aung",
+  "author": "Arkar Kyaw Aung <alxarkar@gmail.com>",
   "license": "MIT",
-  "repository": {},
-  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arkarsg/x-sampa-to-ipa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arkarsg/x-sampa-to-ipa/issues"
+  },
+  "homepage": "https://github.com/arkarsg/x-sampa-to-ipa",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
