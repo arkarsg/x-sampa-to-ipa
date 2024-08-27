@@ -136,3 +136,13 @@ export const xsampa2ipa: { [key: string]: string } = Object.fromEntries(
         '-\\':'‿'
     }).map(([k, v]) => [k, v.replace(/◌/g, '')])
 );
+
+function swap(json: { [key: string]: string}) {
+    var ret = {} as { [key: string]: string};
+    for(var key in json){
+      ret[json[key]] = key;
+    }
+    return ret;
+}
+
+export const ipa2xsampa = swap(xsampa2ipa);

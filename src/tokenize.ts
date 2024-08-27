@@ -7,7 +7,7 @@ const splitAt = (xs: string, idx: number) => [xs.slice(0, idx), xs.slice(idx)]
 
 const isAsciiString = (str: string) => /^[\x00-\x7F]+$/g.test(str);
 
-class Tokenizer {
+class SampaTokenizer {
     sampaString: string
     tokens: string[]
 
@@ -36,9 +36,9 @@ class Tokenizer {
     }
 }
 
-export function tokenize(sampaString: string): string[] {
+export function tokenizeSampa(sampaString: string): string[] {
     if (!isAsciiString(sampaString)) {
         throw new InvalidTokenError()
     }
-    return (new Tokenizer(sampaString)).tokenize()
+    return (new SampaTokenizer(sampaString)).tokenize()
 }
