@@ -1,4 +1,4 @@
-import { toIpa } from '../src/index'
+import { InvalidTokenError, toIpa } from '../src/index'
 
 test('X-Sampa to IPA converts 1 character', () => {
   expect(toIpa('S')).toBe('ʃ')
@@ -9,7 +9,7 @@ test('X-Sampa to IPA supports voiced postalveolar affricate', () => {
 })
 
 test('XSampa2Ipa handles invalid input', () => {
-  expect(() => toIpa('t͡ʃ')).toThrow(new Error("Invalid X-SAMPA symbol"))
+  expect(() => toIpa('t͡ʃ')).toThrow(new InvalidTokenError())
 })
 
 test('Cuttlefish', () => {
@@ -20,3 +20,6 @@ test('Job', () => {
   expect(toIpa('dZQb')).toBe('d͡ʒɒb')
 })
 
+test('Rand', () => {
+  expect(() => toIpa('!_')).toThrow(new InvalidTokenError())
+})

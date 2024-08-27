@@ -1,3 +1,5 @@
+import { InvalidTokenError } from './InvalidTokenError'
 import { toIpa } from './Sampa'
 
-export { toIpa }
+export { InvalidTokenError, toIpa }
+

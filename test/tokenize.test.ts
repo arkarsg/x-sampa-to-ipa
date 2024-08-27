@@ -1,3 +1,4 @@
+import { InvalidTokenError } from '../src'
 import { tokenize } from '../src/tokenize'
 
 
@@ -14,5 +15,5 @@ test('Tokenizer length precedence', () => {
 })
 
 test('Tokenizer handles invalid chars', () => {
-  expect(() => tokenize('t͡ʃ')).toThrow(new Error("Invalid X-SAMPA symbol"));
+  expect(() => tokenize('t͡ʃ')).toThrow(new InvalidTokenError());
 })

@@ -1,3 +1,4 @@
+import { InvalidTokenError } from "./InvalidTokenError";
 import { xsampa2ipa } from "./xsampa2ipa";
 
 const sortedKeys = Object.keys(xsampa2ipa).sort((a, b) => b.length - a.length);
@@ -26,6 +27,9 @@ class Tokenizer {
 
     next(): [string, string] {
         const candidateSampa = sortedKeys.find(s => this.sampaString.startsWith(s));
+        if (candidateSampa === undefined) {
+            throw new InvalidTokenError()
+        }
         const splitLength = candidateSampa ? candidateSampa.length : 0;
         const [token, rest] = splitAt(this.sampaString, splitLength)
         return [token, rest || '']
@@ -34,7 +38,7 @@ class Tokenizer {
 
 export function tokenize(sampaString: string): string[] {
     if (!isAsciiString(sampaString)) {
-        throw new Error("Invalid X-SAMPA symbol")
+        throw new InvalidTokenError()
     }
     return (new Tokenizer(sampaString)).tokenize()
 }
